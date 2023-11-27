@@ -1,0 +1,124 @@
+dn: dc=example,dc=org
+objectClass: domain
+objectClass: top
+dc: example
+
+dn: ou=Users,dc=example,dc=org
+objectClass: organizationalUnit
+objectClass: top
+ou: Users
+
+dn: ou=Groups,dc=example,dc=org
+objectClass: organizationalUnit
+objectClass: top
+ou: Groups
+
+dn: cn=GemFireDeveloper,ou=groups,dc=example,dc=org
+objectClass: groupOfUniqueNames
+objectClass: top
+ou: groups
+description: GemFire developers can read and write regions
+uniquemember: uid=jmartin, ou=Users, dc=example,dc=org
+cn: GemFireDeveloper
+
+dn: cn=GemFireAdmin,ou=groups,dc=example,dc=org
+objectClass: groupOfUniqueNames
+objectClass: top
+ou: groups
+description: GemFire Administrators
+uniquemember: uid=jmartin, ou=Users, dc=example,dc=org
+cn: GemFireAdmin
+
+dn: cn=GemFireClusterManage,ou=groups,dc=example,dc=org
+objectClass: groupOfUniqueNames
+objectClass: top
+ou: groups
+description: GemFire Cluster Manage
+uniquemember: uid=clusterManage, ou=Users, dc=example,dc=org
+cn: GemFireClusterManage
+
+dn: cn=GemFireReadOnly,ou=groups,dc=example,dc=org
+objectClass: groupOfUniqueNames
+objectClass: top
+ou: groups
+description: GemFire Read Only
+uniquemember: uid=readOnly, ou=Users, dc=example,dc=org
+cn: GemFireReadOnly
+
+dn: cn=SomeOtherRole,ou=groups,dc=example,dc=org
+objectClass: groupOfUniqueNames
+objectClass: top
+ou: groups
+description: Some Other Role
+uniquemember: uid=jmartin, ou=Users, dc=example,dc=org
+uniquemember: uid=operson,ou=Users,dc=example,dc=org
+uniquemember: uid=specialgroupname,ou=Users,dc=example,dc=org
+cn: SomeOtherRole
+
+dn: cn=TheSpecial_GroupName,ou=groups,dc=example,dc=org
+objectClass: groupOfUniqueNames
+objectClass: top
+ou: groups
+description: The Special Group Name
+uniquemember: uid=specialgroupname,ou=Users,dc=example,dc=org
+cn: TheSpecial_GroupName,ou=groups,dc=example,dc=org
+
+dn: uid=jmartin,ou=Users,dc=example,dc=org
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: John Martin
+sn: Martin
+uid: jmartin
+userPassword: password1234
+
+dn: uid=operson,ou=Users,dc=example,dc=org
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Other Person
+sn: Person
+uid: operson
+userPassword: password1234
+
+dn: uid=specialgroupname,ou=Users,dc=example,dc=org
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Other Person
+sn: Person
+uid: specialgroupname
+userPassword: password1234
+
+dn: uid=clusterManage,ou=Users,dc=example,dc=org
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Other Person
+sn: Person
+uid: clusterManage
+userPassword: password1234
+
+dn: uid=switchRoles,ou=Users,dc=example,dc=org
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Switching Roles
+sn: Person
+uid: switchRoles
+userPassword: password1234
+
+dn: uid=readOnly,ou=Users,dc=example,dc=org
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Read Only
+sn: Only
+uid: readOnly
+userPassword: password1234
